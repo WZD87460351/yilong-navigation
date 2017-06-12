@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yilong</title>
+    <style>
+        li{
+            list-style: none;
+            height: 260px;
+            width: 200px;
+            float: left;
+            position: relative
+            
+        }
+        li .doe{
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        li .doe h1{
+            width: 20px;
+            color: white;
+            margin: 0 auto;
+        }
+        li .main{
+            height: 100%;
+            width: 100%;
+        }
+        li:nth-child(1) .main{
+            background: url(image/1.jpg) center;
+        }
+        li:nth-child(2) .main{
+            background: url(image/2.jpg) center;
+        }
+        li:nth-child(3) .main{
+            background: url(image/3.jpg) center;
+        }
+        li:nth-child(4) .main{
+            background: url(image/4.jpg) center;
+        }
+        li:nth-child(5) .main{
+            background: url(image/5.jpg) center;
+        }
+        li:nth-child(6) .main{
+            background: url(image/6.jpg) center;
+        }
+    </style>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            $('ul li').hover(function(){
+                $(this).stop().animate({width:'400px'},300).siblings().stop().animate({width:'160px'},300);
+                $(this).find('.doe').css({display:'none'});
+                $(this).css({margin:'1px'})
+            },function(){
+                $('ul li').stop().animate({width:'200px'});
+                $(this).find('.doe').css({display:'block'});
+                $(this).css({margin:'0px'})
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li>
+                <div class="doe">
+                    <h1>园林酒店</h1>
+                </div>
+                <div class="main"></div>
+            </li>
+            <li>
+                <div class="doe">
+                    <h1>园林酒店</h1>
+                </div>
+                <div class="main"></div>
+            </li>
+            <li>
+                <div class="doe">
+                    <h1>园林酒店</h1>
+                </div>
+                <div class="main"></div>
+            </li>
+            <li>
+                <div class="doe">
+                    <h1>园林酒店</h1>
+                </div>
+                <div class="main"></div>
+            </li>
+            <li>
+                <div class="doe">
+                    <h1>园林酒店</h1>
+                </div>
+                <div class="main"></div>
+            </li>
+            <li>
+                <div class="doe">
+                    <h1>园林酒店</h1>
+                </div>
+                <div class="main"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
